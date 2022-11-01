@@ -1,4 +1,3 @@
-
 /*
 ██████  ██████   ██████  ███████ ██ ██
 ██   ██ ██   ██ ██    ██ ██      ██ ██
@@ -111,7 +110,7 @@
 /* Barre de recherche de App Directory */
 .input-2g-os5 { border: none !important; }
 .searchIcon-34RNw9, .clearIcon-TMIIUa { margin-left: 20px; }
-.text-xs-normal-3SiVjE { display: none; }
+.inputWrapper-1YNMmM > .text-xs-normal-3SiVjE { display: none; }
 
 /* App Directory */
 .container-2NdZr9, .card-2xymMp, .category-2OvQ93 {
