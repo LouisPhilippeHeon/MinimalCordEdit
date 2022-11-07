@@ -392,43 +392,40 @@
 ██      ██ ███████ ███████ ███████ ██   ██  ██████  ███████ ███████
 */
 
-/* TODO Border left au lieu de background image pour les messages auquel on répond */
+/* S'assurer que les gros emoji ne touchent pas le bas du message */
+.emoji.jumboable { margin-bottom: 2px; }
+
+/* Aligne la bordure de nouveaux messages aux messages */
+.divider-IqmEqJ { margin-left: 2px !important; }
+
+/* Aligne avec le nom d'utilisateur le texte auquel on répond */
+.cozy-VmLDNB .timestamp-p1Df1m { line-height: inherit; }
 
 /* Messages en cours de chargement */
 #app-mount .wrapper-15CKyy {
   margin-left: 2px !important;
-  margin-right: 4px !important;
+  margin-right: 3px !important;
 }
 
 /* Change la couleurs des messages dans lesquels on est mentioné */
 .mentioned-Tre-dv .groupStart-3Mlgv1::before { z-index: -10 !important; }
 .mentioned-Tre-dv::before {
-  background: rgb(10, 39, 53) !important;
-  border-left: 3px solid rgba(var(--accent)) !important;
-  border-top-left-radius: 0 !important;
-  border-bottom-left-radius: 0 !important;
-  height: calc(100% - 4px) !important;
-  width: calc(100% - 3px) !important;
+  background: var(--mentionned) !important;
+  border-left: 3px solid rgba(var(--accent));
 }
 
 /* Change la couleur des messages dans lequel on est mentioné au survol */
 .mentioned-Tre-dv:hover::before { background-color: var(--mentionned-hover) !important; }
 
 /* Change la couleur des messages au survol */
-.message-2CShn3:not(.mentioned-Tre-dv):hover::before { background: var(--message-edit) !important; }
+.message-2CShn3:not(.mentioned-Tre-dv, .replying-eZ7p5z):hover::before { background: var(--message-edit) !important; }
 
-.message-2CShn3:not(.mentioned-Tre-dv):hover::before, .mentioned-Tre-dv:hover::before { transition: var(--transition-background); }
+.message-2CShn3::before, .mentioned-Tre-dv::before { transition: var(--transition-background); }
 
 /* Évite que au survol la zone ayant une couleur différente ait un coin arrondi */
 .message-2CShn3:not(.groupStart-3Mlgv1)::before {
   border-top-left-radius: 0 !important;
   border-top-right-radius: 0 !important;
-}
-
-/* Couleur des messages sélectionnés */
-.message-2CShn3:not(.mentioned-Tre-dv) {
-  padding-top: 0 !important;
-  padding-bottom: 7px !important;
 }
 
 /* Zone de texte lorsque l'on modifie un message */
@@ -438,26 +435,28 @@
 .spoilerText-27bIiA { background-color: var(--spoiler) !important; }
 
 /* Met en évidence le message auquel l'utilisateur répond */
-.replying-eZ7p5z:not(.mentioned-Tre-dv):hover::before
-{ background-image: linear-gradient(to right, rgba(var(--accent)) 0 3px, var(--replying-hover) 0 100%) !important; }
+.replying-eZ7p5z::before {
+  background-color: var(--replying) !important;
+  border-left: 4px solid rgba(var(--accent));
+}
 
-.replying-eZ7p5z.mentioned-Tre-dv:hover::before
-{ background-image: linear-gradient(to right, rgba(var(--accent)) 0 1px, var(--replying-hover) 0 100%) !important; }
+.replying-eZ7p5z:hover::before { background-color: var(--replying-hover) !important; }
 
-.replying-eZ7p5z:not(.mentioned-Tre-dv)::before {
+.replying-eZ7p5z::before, .mentioned-Tre-dv::before {
   border-top-left-radius: 0 !important;
   border-bottom-left-radius: 0 !important;
+  box-sizing: border-box;
 }
-.replying-eZ7p5z:not(.mentioned-Tre-dv)::before
-{ background-image: linear-gradient(to right, rgba(var(--accent)) 0 3px, var(--replying) 0 100%) !important; }
-.replying-eZ7p5z.mentioned-Tre-dv::before
-{ background-image: linear-gradient(to right, rgba(var(--accent)) 0 1px, var(--replying) 0 100%) !important; }
 
 /* Le texte en surlignage (on est taggé dans le message ou l'on nous répond) */
 .markup-eYLPri::after, .container-1ov-mD:before { border-left: none !important; }
+
+/* Heure */
+.cozy-VmLDNB .timestamp-p1Df1m.alt-1dvXnH { line-height: 19px; }
 .latin12CompactTimeStamp-2G5XJd {
-  margin-left: 5px;
-  padding-top: 5px !important;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%) !important;
 }
 
 /* Modification d'un message */
@@ -470,9 +469,6 @@
 .groupStart-3Mlgv1 > .contents-2MsGLg > div > .channelTextArea-220_Gz { transform: translateY(-5px); }
 .message-2CShn3:hover > .contents-2MsGLg > div > .channelTextArea-220_Gz > .scrollableContainer-15eg7h { background-color: var(--background-alt) !important; }
 .operations-36ENbA { padding-left: 1px !important; }
-
-/* Aligne la bordure de nouveaux messages aux messages */
-.divider-IqmEqJ { margin-left: 0 !important; }
 
 /* Rapproche la boite des messages dans main de la barre de scroll */
 .message-2CShn3 { margin-right: 4px !important; }
@@ -488,19 +484,11 @@
 }
 .messageContent-2t3eCI:not(.repliedTextContent-2hOYMB) > .emojiContainer-2XKwXX > .emoji:not(.jumboable) {
   vertical-align: top;
-  padding-top: 4px;
+  padding-top: 3px;
 }
 
 /* Évite que les enbeded prennent toute la largeur */
 .embedFull-1HGV2S { min-width: 100px !important; }
-/* Ajuste la hauteur des messages sur lequels on est taggé et qui sont au début d'un bloc de messages */
-.mentioned-Tre-dv.groupStart-3Mlgv1:before { height: calc(100% - 7px) !important; }
-
-/* Retire le trou béant à la fin des messages sur lequel on est taggé quands ils sont seuls dans leur groupe */
-.mentioned-Tre-dv.groupStart-3Mlgv1 { margin-bottom: -7px !important; }
-
-/* Rajoute un peu d'espace au début des groupes de messages */
-div.groupStart-3Mlgv1.message-2CShn3 { padding-top: 7px !important; }
 
 /*
 ███    ███ ██ ███████  ██████
@@ -570,7 +558,7 @@ a[href="/store"], /* Nitro en dessous de Amis dans la barre de gauche de l'accue
 
 /* Menu de recherche */
 .option-ayUoaq:hover {
-  background-color: #36393F;
+  background-color: var(--recherche-suggestion-hover);
   opacity: 1;
 }
 .answer-14OVbQ {
@@ -868,7 +856,7 @@ a[href="/store"], /* Nitro en dessous de Amis dans la barre de gauche de l'accue
 
 /* Écran des réactions */
 .reactors-1VXca7 { background-color: var(--background) !important; }
-.focusLock-2tveLW > .container-KM8BU6 > .thin-31rlnD:not(.reactors-1VXca7) { background-color: #141519; }
+.focusLock-2tveLW > .container-KM8BU6 > .thin-31rlnD:not(.reactors-1VXca7) { background-color: var(--background-dark); }
 
 /* Quand la barre répondre à X est affichée */
 .clipContainer-31nYlH { width: calc(100% + 4px); }
@@ -903,7 +891,7 @@ a[href="/store"], /* Nitro en dessous de Amis dans la barre de gauche de l'accue
 
 /* Fait correspondre la couleur de l'icone de recherche à celle des autres, ainsi que la taille et l'alignement */
 .icon-18rqoe {
-  color: rgb(185, 187, 190);
+  color: var(--interactive-normal);
   height: 22px;
   width: 22px;
   top: -4px;
@@ -939,7 +927,7 @@ div, i, img, li, ul, svg, button, input, span, header, label, .mainContent-20q_H
   --background-modifier-hover: var(--background-alt);
   --background-modifier-active: var(--background-light);
   --channels-default: var(--text-normal);
-  --version: "2.0.13";
+  --version: "1.0.0";
 }
 
 .theme-light,
@@ -962,6 +950,13 @@ html.theme-light .force-theme.theme-light {
   --scrollbar-colour: rgba(0 0 0 / 0.2);
   --edit-message-box: var(--background-light);
   --message-background: var(--background-light);
+  --replying: #a0e0ff;
+  --replying-hover: #94dcff;
+  --mentionned: #c5ebfd;
+  --mentionned-hover: #d0f0ff;
+  --message-edit: #fff;
+  --spoiler: #e4eefe;
+  --recherche-suggestion-hover: #EBEDEF;
 }
 
 .theme-dark,
@@ -972,7 +967,7 @@ html.theme-dark .force-theme.theme-light {
   --background: #171a1f;
   --background-alt: #1b1f25;
   --background-dark: #131519;
-  --text-normal: #aeafb1;
+  --text-normal: #BBBCBD;
   --text-muted: #515357;
   --text-focus: #fff;
   --font-weight-light: 300;
@@ -985,6 +980,13 @@ html.theme-dark .force-theme.theme-light {
   --edit-message-box: var(--background-light);
   --message-background: var(--background-alt);
   --header-primary: var(--text-focus);
+  --replying: #03304A;
+  --replying-hover: #05355A;
+  --mentionned: #0A2735;
+  --message-edit: #202630;
+  --mentionned-hover: #0B2C40;
+  --spoiler: #283242;
+  --recherche-suggestion-hover: #36393F;
 }
 
 #app-mount .bg-1QIAus {
@@ -1290,8 +1292,9 @@ html, span:not([class*=spinner-]):not([class*=spinnerItem]) {
   padding-left: 5px;
 }
 #app-mount .cozy-VmLDNB .timestamp-p1Df1m.alt-1dvXnH {
-  width: calc(40px + var(--message-padding));
+  /* width: calc(40px + var(--message-padding)); */
   display: flex;
+  align-content: center;
   justify-content: center;
 }
 #app-mount .cozy-VmLDNB.mentioned-Tre-dv .messageContent-2t3eCI {
@@ -1308,8 +1311,6 @@ html, span:not([class*=spinner-]):not([class*=spinnerItem]) {
   border-radius: 0 var(--border-radius) 0 0;
   height: 100%;
   width: calc(100% - var(--message-padding));
-  border-left: 2px solid rgba(var(--discord-yellow)/1);
-  background: var(--background-mentioned);
   pointer-events: none;
 }
 #app-mount .cozy-VmLDNB.mentioned-Tre-dv .container-2sjPya {
@@ -1429,8 +1430,9 @@ html, span:not([class*=spinner-]):not([class*=spinnerItem]) {
   height: 0;
   top: 0;
 }
+
 #app-mount .divider-2rZFJK.isUnread-3Lojb-.beforeGroup-1BvJAt {
-  margin: var(--message-spacing) 8px var(--message-spacing) 20px;
+  margin: var(--message-spacing) 7px var(--message-spacing) 2px;
 }
 #app-mount .divider-2rZFJK.hasContent-31hcsn {
   margin: var(--message-spacing) 0 var(--message-spacing) 20px;
