@@ -391,11 +391,14 @@
 ██  ██  ██ ██           ██      ██ ██   ██ ██    ██ ██           ██
 ██      ██ ███████ ███████ ███████ ██   ██  ██████  ███████ ███████
 */
-.replying-eZ7p5z:not(.mentioned-Tre-dv)::before {
-  transition: background-image 10s linear !important;
-}
 
 /* TODO Border left au lieu de background image pour les messages auquel on répond */
+
+/* Messages en cours de chargement */
+#app-mount .wrapper-15CKyy {
+  margin-left: 2px !important;
+  margin-right: 4px !important;
+}
 
 /* Change la couleurs des messages dans lesquels on est mentioné */
 .mentioned-Tre-dv .groupStart-3Mlgv1::before { z-index: -10 !important; }
@@ -531,6 +534,9 @@ a[href="/store"], /* Nitro en dessous de Amis dans la barre de gauche de l'accue
 .backButton-bSKWLe, /* Boutton retour dans la barre de recherche des gifs */
 .newMemberBadge-3PdStX
 { display: none !important; }
+
+/* Revenir aux messages récents */
+.barBase-3xxDXu { right: 12px; }
 
 /* Nouvelle icone pour le serveur Among us pour les gens cool */
 [aria-label=" Among us pour les gens cool"] > .childWrapper-1j_1ub {
@@ -1277,7 +1283,7 @@ html, span:not([class*=spinner-]):not([class*=spinnerItem]) {
 }
 #app-mount .cozy-VmLDNB.cozy-VmLDNB:not(.groupStart-3Mlgv1) {
   margin-top: calc(var(--message-padding) / -1);
-  /* padding-top: 0.175rem; */
+  padding-top: 0.175rem;
 }
 #app-mount .cozy-VmLDNB .messageContent-2t3eCI {
   margin-left: -5px;
