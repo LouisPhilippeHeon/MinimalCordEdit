@@ -1,0 +1,50 @@
+/**
+ * @name SERISET's MinimalCord
+ * @author SERISET#1984
+ * @version 1.0.0
+ * @description Une modification de MinimalCord de Gibbu#1211 par SERISET#1984.
+*/
+
+@import url('https://discordstyles.github.io/HorizontalServerList/dist/HorizontalServerList.css');
+@import url('https://cdn.jsdelivr.net/gh/LouisPhilippeHeon/MinimalCordEdit/MinimalCord.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap');
+
+:root {
+  /* Couleur d'accent */
+  --accent: 40, 150, 204;
+  --accent-hover: #1e78a5;
+
+  /* Padding entre les messages, valeur en px, 10px par défaut */
+  --message-padding: 10px;
+  /* Espacement entre les messages, valeur en px, 9px par défaut */
+  --message-spacing: 9px;
+
+  /* Police de caractère */
+  --font: 'Roboto';
+
+  /* Taille des icones des serveurs, 40px par défaut */
+  --HSL-server-icon-size: 36px;
+
+  /* Distance qui sépare les serveurs, 10px par défaut */
+  --HSL-server-spacing: calc(2.6vw - 21px);
+
+  --transition-background: background-color 0.2s linear !important;
+
+  --brand-experiment: #2896CC;
+  --brand-experiment-15a: #203A4D;
+  --brand-experiment-560: #2896CC;
+
+}
+
+/* DÉCOMMENTER SI SUR MAC OS */
+
+/*
+.drag-2yz2Kd::before, .sidebarRegion-1VBisG::before { left: 80px; }
+.platform-osx .wrapper-1_HaEi { margin-top: 0px !important; }
+.base-2jDfDU { margin-top: -32px; }
+.scroller-1Bvpku, .wrapper-1_HaEi {
+  margin-left: 85px;
+  max-height: calc(100vw - 85px) !important;
+  max-width: 100%;
+}
+*/
