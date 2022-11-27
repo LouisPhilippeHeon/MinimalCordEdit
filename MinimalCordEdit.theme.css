@@ -27,13 +27,6 @@
 
   /* Distance qui sépare les serveurs, 10px par défaut */
   --HSL-server-spacing: calc(2.6vw - 21px);
-
-  --transition-background: background-color 0.2s linear !important;
-
-  --brand-experiment: #2896CC;
-  --brand-experiment-15a: #203A4D;
-  --brand-experiment-560: #2896CC;
-
 }
 
 /* DÉCOMMENTER SI SUR MAC OS */
