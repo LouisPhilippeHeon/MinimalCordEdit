@@ -9,17 +9,13 @@
 /* Éviter que la largeur des connexions sur un profil soit trop grandes */
 .connectedAccount-2Jb-Z0 { max-width: 270px; }
 
-/* Profil utilisateur */
-.scroller-1jBQYo { overflow: auto !important; }
+.note-3TX9O7 { margin: 0; }
 
-/* Retirer les notes */
-.scroller-1jBQYo > .section-3FmfOT:nth-last-child(3) { display: none; }
-
-/* Retirer les notes sur son propre profil */
-.lastSection-3_1yKt:not(.section--1D3ev) > h2,
-.lastSection-3_1yKt:not(.section--1D3ev) > div
-{ display: none; }
-.lastSection-3_1yKt:not(.section--1D3ev) { padding-top: 0; }
+.note-6O4w9y > .input-2g-os5 {
+  background: var(--note) !important;
+  border: 1px solid var(--background) !important;
+  padding-top: 7px;
+}
 
 /* Diviseur Membre depuis */
 .divider-D-Vspq { margin: 0 auto; }
@@ -600,9 +596,6 @@ a[href="/store"], /* Nitro en dessous de Amis dans la barre de gauche de l'accue
 .wrapper-2RrXDg:hover > div > .body-16rSsp > .section-3G9aLW { background: var(--background-alt) !important; }
 .wrapper-2RrXDg { transition: 0.2s background; }
 
-/* Largeur des channels dans la colonne de gauche */
-.containerDefault-YUSmu3 { width: calc(100% + 3px); }
-
 /* Padding des icones */
 .iconWrapper-2awDjA { margin: 0 7px 0 7px; }
 .search-39IXmY { margin: 0 7px 0 6px !important; }
@@ -957,6 +950,7 @@ html.theme-light .force-theme.theme-light {
   --message-edit: #fff;
   --spoiler: #e4eefe;
   --recherche-suggestion-hover: #EBEDEF;
+  --note: #e2e8f0e3;
 }
 
 .theme-dark,
@@ -987,6 +981,7 @@ html.theme-dark .force-theme.theme-light {
   --mentionned-hover: #0B2C40;
   --spoiler: #283242;
   --recherche-suggestion-hover: #36393F;
+  --note: #00000030;
 }
 
 #app-mount .bg-1QIAus {
@@ -1157,7 +1152,7 @@ html, span:not([class*=spinner-]):not([class*=spinnerItem]) {
 }
 #app-mount .content-1gYQeQ {
   margin-left: 0;
-  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  border-radius: 0 var(--border-radius) var(--border-radius) 0 !important;
   padding-left: 16px;
 }
 #app-mount .unread-36eUEm {
