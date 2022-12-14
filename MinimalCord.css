@@ -6,6 +6,11 @@
 ██      ██   ██  ██████  ██      ██ ███████
 */
 
+/* Décoration de photo de profil pour ceux qui ont Nitro durant le temps des fêtes */
+.avatarDecoration-34OC0G {
+  left: calc(var(--message-padding)*var(--decoration-to-avatar-ratio)/2);
+}
+
 /* Éviter que la largeur des connexions sur un profil soient trop grandes */
 .connectedAccount-2Jb-Z0 {
   max-width: 270px;
