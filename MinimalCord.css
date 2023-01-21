@@ -94,9 +94,9 @@
 }
 
 .sidebar-nqHbhN>.side-2ur1Qk>.selected-g-kMVV,
-.selectedBackground-1t6xXq,
 .role-3pGE29.selected-g-kMVV {
-  background-image: linear-gradient(to right, rgba(var(--accent)) 0% 2.3%, var(--background-light) 2.3% 100%);
+  box-shadow: 5px 0 0 0 rgb(var(--accent)) inset;
+  background-color: var(--background-light) !important;
 }
 
 /* Mouvement vers la droite des catégories des paramètres dans la colone de gauche */
@@ -346,15 +346,12 @@
 }
 
 /* État des boost de serveur */
-.closeWrapper-1aVqeP {
-  height: calc(var(--HSL-server-icon-size) + 20px);
-  background-color: var(--background-dark);
-  padding: 0;
-}
-
 .perksModal-CLcR1c {
   background-color: var(--background) !important;
-  margin-top: calc(var(--HSL-server-icon-size) + 20px);
+}
+
+.closeWrapper-1aVqeP {
+  padding: 0;
 }
 
 .foreground-3_3Pgi,
@@ -368,12 +365,6 @@
 /* Paramètres > Discord Nitro > Inclut également */
 .featuresHeader-4YwLcc {
   margin-bottom: 20px;
-}
-
-/* Icone dans les paramètres de facturation pour Discord Nitro */
-.selectedBackground-2KQZ6B {
-  background-color: var(--background-modifier-selected);
-  background-image: linear-gradient(to right, rgba(var(--accent)) 0% 2.2%, var(--background-alt) 2.2% 100%) !important;
 }
 
 /* Couleur de la sidebar et de la région principale */
@@ -822,6 +813,11 @@ a[href="/store"],
   transition: var(--transition-background);
 }
 
+/* Ajouter de l'espace à la fin de la liste d'ami */
+.peopleList-2VBrVI {
+  overflow: scroll !important;
+}
+
 /* Revenir aux messages récents */
 .barBase-3xxDXu {
   right: 12px;
@@ -841,22 +837,6 @@ a[href="/store"],
 /* Liste d'amis */
 .peopleColumn-1wMU14>div>.title-x4dI75 {
   margin: 16px 20px 8px 20px !important;
-}
-
-/* Nouvelle icone pour le serveur Among us pour les gens cool */
-[aria-label=" Among us pour les gens cool"]>.childWrapper-1j_1ub {
-  background-image: url("https://d2jcw5q7j4vmo4.cloudfront.net/VHB9bVB8cTcnqwnu0nJqKYbiutRclnbGxTpwnayKB4vMxZj8pk1220Rg-6oQ68DwAkqO=w300") !important;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 48px !important;
-  color: rgba(0, 0, 0, 0) !important;
-  border-radius: 100%;
-  filter: grayscale(0.2);
-  transition: border-radius 0.4s;
-}
-
-[aria-label=" Among us pour les gens cool"]:hover>.childWrapper-1j_1ub {
-  border-radius: 15px;
 }
 
 /* Highlight des gens qui parlent en call */
@@ -1224,15 +1204,12 @@ a[href="/store"],
   min-height: 57px;
 }
 
-.scrollableContainer-15eg7h {
-  width: calc(100% + 4px);
-}
-
 /* Message input box */
 .form-3gdLxP {
   margin-top: -7px;
   margin-bottom: -1px;
   padding-left: 2px;
+  padding-right: 12px;
 }
 
 /* Change la couleur du bouton "Ajouter un ami" de l'accueil et le bouton "Envoyer une demande d'ami du profil pour qu'il corresponde à la couleur d'accent, le bouton BetterDiscord */
@@ -1345,17 +1322,19 @@ a[href="/store"],
 
 /* Ajoute une transition sur le padding de gauche lorsque les membres de la barre de droite sont survolés et quand on répond à un message */
 .layout-1qmrhw,
+.layout-1LjVue,
 .replying-eZ7p5z,
 .sidebar-nqHbhN>.side-2ur1Qk>.item-3XjbnG,
 .layoutStyle-3d1mjU>.side-2ur1Qk>.item-3XjbnG,
+.interactive-26HRN_,
 .row-LoqnA5.item-3XjbnG {
   transition: padding-left 0.1s linear,
     padding-right 0.1s linear,
     margin-left 0.1s linear;
 }
 
-/* Au survol, les membre de la barre de droite sont décalé vers la droite */
-.layout-1qmrhw:hover {
+/* Au survol, les membres de la barre de droite sont décalés vers la droite */
+.interactive-26HRN_:hover {
   padding-left: 10px;
 }
 
@@ -1364,14 +1343,11 @@ a[href="/store"],
 .interactiveSelected-29CP8y,
 .role-3pGE29.selected-g-kMVV,
 .row-LoqnA5.item-3XjbnG.selected-g-kMVV {
-  background-image: linear-gradient(to right, rgba(var(--accent)) 0% 2.2%, var(--background-alt) 2.2% 100%) !important;
+  box-shadow: 5px 0 0 0 rgb(var(--accent)) inset;
+  background-color: var(--background-light-alt) !important;
   padding-left: 10px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-}
-
-.role-3pGE29.selected-g-kMVV {
-  padding-left: 20px !important;
 }
 
 /* Écran des réactions */
@@ -1383,26 +1359,9 @@ a[href="/store"],
   background-color: var(--background-dark);
 }
 
-/* Quand la barre répondre à X est affichée */
-.clipContainer-31nYlH {
-  width: calc(100% + 4px);
-}
-
 .hasConnectedBar-1vN2JH {
   border-top-left-radius: 0 !important;
   border-top-right-radius: 0 !important;
-}
-
-/* Ajoute une transition sur le padding de gauche lorsque les membres de la barre de droite sont survolés et quand on répond à un message */
-.layout-1qmrhw,
-.replying-eZ7p5z,
-.sidebar-nqHbhN>.side-2ur1Qk>.item-3XjbnG,
-.layoutStyle-3d1mjU>.side-2ur1Qk>.item-3XjbnG,
-.interactive-1vLZ_I,
-.row-LoqnA5.item-3XjbnG {
-  transition: padding-left 0.1s linear,
-    padding-right 0.1s linear,
-    margin-left 0.1s linear;
 }
 
 /* Au survol, les membre de la barre de droite sont décalés vers la droite */
@@ -1451,6 +1410,7 @@ input,
 span,
 header,
 label,
+.link-39sEB3,
 .mainContent-20q_Hp {
   cursor: default !important;
 }
@@ -2448,7 +2408,6 @@ span:not([class*=spinner-]):not([class*=spinnerItem]) {
 
 #app-mount .channel-1Shao0 {
   margin-left: 0;
-  border-radius: 0;
   padding: 0;
   margin-bottom: 3px;
 }
