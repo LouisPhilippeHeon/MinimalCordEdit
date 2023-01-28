@@ -818,6 +818,31 @@ a[href="/store"],
   overflow: scroll !important;
 }
 
+/* Empêcher Discord de override des couleurs */
+.scroller-WSmht3,
+.withBackgroundOverride-gzmZco,
+.chatContent-3KubbW,
+.container-YkUktl {
+  background-color: transparent !important;
+}
+
+/* Transition sur la couleur du texte des discussions */
+.interactiveSelected-29CP8y {
+  transition: color 0.2s linear;
+}
+
+/* Distancie de la barre de scroll conversations */
+.channel-1Shao0 {
+  max-width: none;
+  margin-right: 2px;
+}
+
+/* Distancie de la barre de scroll les channels et les membres */
+.content-1gYQeQ,
+.content-2a4AW9 {
+  margin-right: 2px;
+}
+
 /* Revenir aux messages récents */
 .barBase-3xxDXu {
   right: 12px;
