@@ -457,6 +457,30 @@
    ██    ██    ██    ███████ ███████ ██████  ██   ██ ██   ██
 */
 
+/* Permettre de faire scroller la liste de serveurs */
+.scroller-3X7KbA::-webkit-scrollbar {
+  display: none;
+}
+
+.scroller-3X7KbA {
+  overflow-y: scroll !important;
+}
+
+/* Taille des serveurs */
+.svg-2ifYOU,
+.listItem-3SmSlK,
+.blobContainer-ikKyFs,
+.wrapperSimple-2SFl9K,
+.wrapper-2PSQCG {
+  height: var(--HSL-server-icon-size);
+  width: var(--HSL-server-icon-size);
+}
+
+/* Couleur de fond de la barre de titre */
+.scroller-3X7KbA {
+  background: none !important;
+}
+
 /* La couleur d'arrière plan des folder est alignée */
 .expandedFolderBackground-3ZDF05 {
   left: calc(10px + var(--HSL-server-icon-size) / 2) !important;
