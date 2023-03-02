@@ -6,11 +6,6 @@
 ██      ██   ██  ██████  ██      ██ ███████
 */
 
-/* Décoration de photo de profil pour ceux qui ont Nitro durant le temps des fêtes */
-.avatarDecoration-34OC0G {
-  left: calc(var(--message-padding)*var(--decoration-to-avatar-ratio)/2);
-}
-
 /* Éviter que la largeur des connexions sur un profil soient trop grandes */
 .connectedAccount-2Jb-Z0 {
   max-width: 270px;
@@ -72,36 +67,53 @@
 ██      ██   ██ ██   ██ ██   ██ ██      ██ ███████    ██    ██   ██ ███████ ███████
 */
 
+/* Avatar dans la page mon compte */
+.avatar-3mTjvZ {
+  min-width: 80px;
+  border: 12px solid var(--background-tertiary);
+  position: relative;
+  top: -45px;
+  left: -65px;
+}
+
+.accountProfileCard-lbN7n->.bannerSVGWrapper-qc0szY>mask {
+  display: none;
+}
+
+.userInfo-regn9W>div:not(.avatar-3mTjvZ) {
+  width: 100%;
+}
+
 /* Thèmes */
 .bd-addon-list.bd-grid-view {
   grid-template-columns: 1fr 1fr;
 }
 
 /* Ajoute une ligne bleue à gauche de l'élément des paramètres sélectionné */
-.row-LoqnA5.item-3XjbnG.selected-g-kMVV,
-.sidebar-nqHbhN>.side-2ur1Qk>.selected-g-kMVV {
+.row-LoqnA5.item-2GWPIy.selected-1sf9UK,
+.sidebar-nqHbhN>.side-1lrxIh>.selected-1sf9UK {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.sidebar-nqHbhN>.side-2ur1Qk>.selected-g-kMVV {
+.sidebar-nqHbhN>.side-1lrxIh>.selected-1sf9UK {
   margin-left: 10px;
 }
 
 /* Rôles */
-.row-LoqnA5.item-3XjbnG.selected-g-kMVV {
+.row-LoqnA5.item-2GWPIy.selected-1sf9UK {
   margin-left: 5px;
 }
 
-.sidebar-nqHbhN>.side-2ur1Qk>.selected-g-kMVV,
-.role-3pGE29.selected-g-kMVV {
+.sidebar-nqHbhN>.side-1lrxIh>.selected-1sf9UK,
+.role-3pGE29.selected-1sf9UK {
   box-shadow: 5px 0 0 0 rgb(var(--accent)) inset;
   background-color: var(--background-light) !important;
 }
 
 /* Mouvement vers la droite des catégories des paramètres dans la colone de gauche */
-.side-2ur1Qk:not(.searchHeaderTabList-3CZMQB)>.item-3XjbnG:hover:not(.selected-g-kMVV):not(.row-LoqnA5),
-.role-3pGE29:hover:not(.selected-g-kMVV) {
+.side-1lrxIh:not(.searchHeaderTabList-3CZMQB)>.item-2GWPIy:hover:not(.selected-1sf9UK):not(.row-LoqnA5),
+.role-3pGE29:hover:not(.selected-1sf9UK) {
   margin-left: 10px;
   background: var(--background-light);
 }
@@ -440,12 +452,17 @@
   transition: border-bottom-color 0.2s linear !important;
 }
 
-.item-3XjbnG:active,
-.selected-g-kMVV {
+.top-Ktfr_T .brand-2EKq3J.item-2GWPIy:active,
+.top-Ktfr_T .brand-2EKq3J.selected-1sf9UK.item-2GWPIy {
+  border-bottom-color: rgb(var(--accent));
+}
+
+.item-2GWPIy:active,
+.selected-1sf9UK {
   border-bottom-color: rgb(var(--accent)) !important;
 }
 
-.top-K_jibn .item-3XjbnG:hover:not(.selected-g-kMVV) {
+.top-K_jibn .item-2GWPIy:hover:not(.selected-1sf9UK) {
   border-bottom-color: var(--text-normal) !important;
 }
 
@@ -795,10 +812,9 @@ a[href="/store"],
 /* Bouton retour dans la barre de recherche des gifs */
 .newMemberBadge-3PdStX,
 /* Nouveau membre sur le profil */
-.premiumIconWrapper-yyGDql
-
+.premiumIconWrapper-yyGDql,
 /* Badge exclusivité Nitro*/
-  {
+.toolbar-3_r2xA>a {
   display: none !important;
 }
 
@@ -830,11 +846,27 @@ a[href="/store"],
 /* Messages */
 .container-3tKtM_,
 /* Explorer les serveurs publics ajouter en ami */
-.topPill-3DJJNV>.item-3XjbnG
+.topPill-2vcLsa>.item-2GWPIy
 
 /* Amis et Demandes de message */
   {
   transition: var(--transition-background);
+}
+
+/* Couleur des boutons */
+.lookFilled-1H2Jvj:not(.colorRed-2VFhM4),
+.colorGreen-jIPCAS {
+  background-color: rgb(var(--accent)) !important;
+}
+
+.lookFilled-1H2Jvj:not(.colorRed-2VFhM4):hover,
+.colorGreen-jIPCAS:hover {
+  background-color: var(--accent-hover) !important;
+}
+
+.lookFilled-1H2Jvj:not(.colorRed-2VFhM4):active,
+.item-5ApiZt:active {
+  background-color: var(--accent-hover) !important;
 }
 
 /* Ajouter de l'espace à la fin de la liste d'ami */
@@ -1099,11 +1131,11 @@ a[href="/store"],
   --switch-color: rgb(var(--accent));
 }
 
-.slider-32CRPX>svg>path[fill="rgba(59, 165, 92, 1)"] {
-  fill: rgb(var(--accent));
+.checked-16gMAN {
+  background-color: rgb(var(--accent)) !important;
 }
 
-.slider-32CRPX>svg>path {
+.slider-HJFN2i>svg>path {
   fill: rgb(114, 118, 125);
 }
 
@@ -1375,10 +1407,10 @@ a[href="/store"],
 .layout-1qmrhw,
 .layout-1LjVue,
 .replying-eZ7p5z,
-.sidebar-nqHbhN>.side-2ur1Qk>.item-3XjbnG,
-.layoutStyle-3d1mjU>.side-2ur1Qk>.item-3XjbnG,
+.sidebar-nqHbhN>.side-1lrxIh>.item-2GWPIy,
+.layoutStyle-3d1mjU>.side-1lrxIh>.item-2GWPIy,
 .interactive-26HRN_,
-.row-LoqnA5.item-3XjbnG {
+.row-LoqnA5.item-2GWPIy {
   transition: padding-left 0.1s linear,
     padding-right 0.1s linear,
     margin-left 0.1s linear;
@@ -1392,8 +1424,8 @@ a[href="/store"],
 /* Applique un fond aux membres de la barre de droite lors du clic, utilise une transition afin que la gauche ait quelques pixel de la couleur d'accent, un peu comme avec les channels */
 .selected-1-Z6gm>.layout-1qmrhw,
 .interactiveSelected-29CP8y,
-.role-3pGE29.selected-g-kMVV,
-.row-LoqnA5.item-3XjbnG.selected-g-kMVV {
+.role-3pGE29.selected-1sf9UK,
+.row-LoqnA5.item-2GWPIy.selected-1sf9UK {
   box-shadow: 5px 0 0 0 rgb(var(--accent)) inset;
   background-color: var(--background-light-alt) !important;
   padding-left: 10px;
