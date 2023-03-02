@@ -854,17 +854,20 @@ a[href="/store"],
 }
 
 /* Couleur des boutons */
-.lookFilled-1H2Jvj:not(.colorRed-2VFhM4),
+.lookFilled-1H2Jvj.primaryButton-361sHl,
+.lookFilled-1H2Jvj.colorBrand-2M3O3N,
 .colorGreen-jIPCAS {
   background-color: rgb(var(--accent)) !important;
 }
 
-.lookFilled-1H2Jvj:not(.colorRed-2VFhM4):hover,
+.lookFilled-1H2Jvj.primaryButton-361sHl:hover,
+.lookFilled-1H2Jvj.colorBrand-2M3O3N:hover,
 .colorGreen-jIPCAS:hover {
   background-color: var(--accent-hover) !important;
 }
 
-.lookFilled-1H2Jvj:not(.colorRed-2VFhM4):active,
+.lookFilled-1H2Jvj.primaryButton-361sHl:active,
+.lookFilled-1H2Jvj.colorBrand-2M3O3N:active,
 .item-5ApiZt:active {
   background-color: var(--accent-hover) !important;
 }
