@@ -11,11 +11,13 @@
   max-width: 270px;
 }
 
-.note-3TX9O7 {
-  margin: 0;
+/* Décoration d'avatar */
+.avatarDecoration-34OC0G {
+  left: calc(var(--message-padding) - 4px);
+  margin-top: -4px;
 }
 
-.note-6O4w9y>.input-2g-os5 {
+.note-1NN2aP>.textarea-_59yqs {
   background: var(--note) !important;
   border: 1px solid var(--background) !important;
   padding-top: 7px;
@@ -67,6 +69,7 @@
 ██      ██   ██ ██   ██ ██   ██ ██      ██ ███████    ██    ██   ██ ███████ ███████
 */
 
+/* Thèmes de couleur Discord */
 .appAsidePanelWrapper-ev4hlp {
   background-color: var(--background-dark);
 }
@@ -86,7 +89,7 @@
   left: -65px;
 }
 
-.accountProfileCard-lbN7n->.bannerSVGWrapper-qc0szY>mask {
+.accountProfileCard-lbN7n->.bannerSVGWrapper-2CLfzN>mask {
   display: none;
 }
 
@@ -282,6 +285,28 @@
   padding-top: 10px;
 }
 
+.role-3pGE29.selected-1sf9UK {
+  margin-left: 10px;
+}
+
+/* Aligner le caret avec le titre */
+.advancedTitle-s3s2oT {
+  line-height: unset;
+}
+
+/* Modale pour ajouter rôle/membre dans les permission avancées d'un channel */
+.input-2lpFVz {
+  width: 100%;
+}
+
+.header-3i_Csh {
+  padding: 0 16px;
+}
+
+.container-1S70rv {
+  border: 1px solid var(--background-modifier-accent);
+}
+
 /* Paramètres > Profil d'utilisateur */
 .baseLayout-8AMrwn>div:not(.customizationSection-IGy2fS) {
   width: 100%;
@@ -307,13 +332,13 @@
   top: 20px !important;
 }
 
-/* Assure que certaines cartes dans les régalges soient de la largeur des régalges */
+/* Assure que certaines cartes soient de la bonne largeur */
 .content-1rPSz4,
 .holidayHeroContainer-252amJ {
   max-width: 100% !important;
 }
 
-/* Modifie des marges dans certains endroits dans les settings */
+/* Modifie des marges dans certains endroits */
 .codeRedemptionRedirect-3SBiCp,
 .marginTop40-Q4o1tS.marginBottom8-emkd0_,
 .divider--oiTeJ {
@@ -405,12 +430,13 @@
 /* Distancier le titre des paramètres de la barre de titre */
 .contentRegionScroller-2_GT_N>.contentColumn-1C7as6:not(.contentColumnMinimal-32PuDO),
 .content-28mbXd,
-.contentRegionScroller-2_GT_N>.content-28mbXd {
+.contentRegionScroller-2_GT_N>.content-28mbXd,
+.customScroller-m1-jZn>.content-yjf30S {
   padding-top: 30px !important;
 }
 
-.customScroller-m1-jZn>.content-2a4AW9 {
-  margin-top: 30px !important;
+.customScroller-m1-jZn>.content-yjf30S>div[aria-hidden=true] {
+  display: none;
 }
 
 /* Change la couleur du texte de la valeur par défaut dans les sliders des paramètres dans la section apparence */
@@ -425,22 +451,23 @@
 }
 
 /* Largeur du contenu principal des paramètres (région à droite) */
-.customScroller-m1-jZn>.content-2a4AW9,
+.customScroller-m1-jZn>.content-yjf30S,
 .content-28mbXd,
 .contentColumn-1C7as6,
-.customColumn-2n-oKU {
+.customColumn-2n-oKU,
+.container-2J1IM0 {
   max-width: min(1500px, 100vw - 290px) !important;
 }
 
 .contentColumn-1C7as6,
-.customScroller-m1-jZn>.content-2a4AW9,
+.customScroller-m1-jZn>.content-yjf30S,
 .customScroller-m1-jZn>.content-28mbXd,
 .contentWidth-3aWel5 {
   margin-left: max(0px, (100vw - 1750px) / 2);
 }
 
-/* Marges pour les logs dans les préférences de serveur */
-.customScroller-m1-jZn>.content-2a4AW9,
+/* Marges pour les logs, membres, banissements et invitations dans les préférences de serveur */
+.customScroller-m1-jZn>.content-yjf30S,
 .content-28mbXd {
   padding: 0 20px 60px 40px;
 }
@@ -626,6 +653,11 @@
 ██  ██  ██ ██           ██      ██ ██   ██ ██    ██ ██           ██
 ██      ██ ███████ ███████ ███████ ██   ██  ██████  ███████ ███████
 */
+
+/* Barre de saisie de messages */
+.textArea-2CLwUE {
+  height: fit-content !important;
+}
 
 /* S'assurer que les gros emoji ne touchent pas le bas du message */
 .emoji.jumboable {
@@ -824,7 +856,9 @@ a[href="/store"],
 /* Nouveau membre sur le profil */
 .premiumIconWrapper-yyGDql,
 /* Badge exclusivité Nitro*/
-.toolbar-3_r2xA>a {
+.toolbar-3_r2xA>a,
+/* Flèche en haut de fenêtre modale */
+.autocompleteArrowWrapper-Kr4DnW {
   display: none !important;
 }
 
@@ -898,6 +932,11 @@ a[href="/store"],
 /* Revenir aux messages récents */
 .barBase-3xxDXu {
   right: 12px;
+}
+
+/* Couleur des boutons du menu de serveur lorsque actif */
+.colorDefault-2_rLdz:active:not(.hideInteraction-1vQrZJ) {
+  background-color: var(--accent-hover) !important;
 }
 
 /* Ajouter en ami */
@@ -1490,6 +1529,7 @@ input,
 span,
 header,
 label,
+h2,
 .link-39sEB3,
 .mainContent-20q_Hp {
   cursor: default !important;
@@ -1561,6 +1601,8 @@ html.theme-light .force-theme.theme-light {
   --background-secondary: var(--background-light-alt);
   --background-secondary-alt: #F9F9F9;
   --background-tertiary: #FAFAFA;
+  --primary-630: var(--background-primary);
+  --primary-700: var(--background-secondary);
 }
 
 .theme-dark,
@@ -1598,6 +1640,8 @@ html.theme-dark .force-theme.theme-light {
   --background-secondary: var(--background-light);
   --background-secondary-alt: #1f2228;
   --background-tertiary: #2b313a;
+  --primary-630: var(--background-primary);
+  --primary-700: var(--background-secondary);
 }
 
 #app-mount .bg-1QIAus {
