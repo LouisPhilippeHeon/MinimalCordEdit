@@ -191,7 +191,7 @@
 }
 
 /* Barre de recherche de App Directory */
-.input-2g-os5 {
+.input-3O04eu {
   border: none !important;
 }
 
@@ -217,8 +217,17 @@
   background-color: var(--background-light-alt) !important;
 }
 
-.directoryModal-YJsOMv {
+.directoryContainer-z-0pgp  {
+  top: calc(20px + var(--HSL-server-icon-size));
   background-color: var(--background) !important;
+}
+
+.scroller-21ztLb::-webkit-scrollbar {
+  display: none;
+}
+
+.closeContent-38PPXq {
+  top: 40px;
 }
 
 /* Paramètres > Keybinds */
@@ -591,7 +600,7 @@
 .layer-2aCOJ3,
 .wrapper-1_HaEi,
 .errorPage-2pZ2Kq,
-.directoryModal-YJsOMv {
+.directoryContainer-z-0pgp {
   -webkit-app-region: no-drag;
 }
 
@@ -1530,7 +1539,7 @@ span,
 header,
 label,
 h2,
-.link-39sEB3,
+.link-1_kTxV,
 .mainContent-20q_Hp {
   cursor: default !important;
 }
@@ -1806,6 +1815,7 @@ span:not([class*=spinner-]):not([class*=spinnerItem]) {
 #app-mount .wrapper-NhbLHG {
   height: auto;
   margin-bottom: 2px;
+  margin-left: 0;
 }
 
 #app-mount .wrapper-NhbLHG.modeMuted-2T4MDZ .name-28HaxV {
