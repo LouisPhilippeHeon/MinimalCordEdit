@@ -80,6 +80,19 @@
   border: 0;
 }
 
+/* Centre familial */
+.container-2rzSkx {
+  align-items: center;
+}
+
+.container-3Ok1v9 {
+  max-width: none;
+}
+
+.banner-3Hf665 {
+  width: 100%;
+}
+
 /* Avatar dans la page mon compte */
 .avatar-3mTjvZ {
   min-width: 80px;
@@ -168,6 +181,10 @@
   width: fit-content;
 }
 
+.selectedBackground-1t6xXq {
+  background: rgba(0, 0, 0, 0);
+}
+
 .premiumLabel-3HPvdB {
   color: var(--text-normal);
 }
@@ -217,7 +234,7 @@
   background-color: var(--background-light-alt) !important;
 }
 
-.directoryContainer-z-0pgp  {
+.directoryContainer-z-0pgp {
   top: calc(20px + var(--HSL-server-icon-size));
   background-color: var(--background) !important;
 }
@@ -876,6 +893,8 @@ a[href="/store"],
 /* Paramètres des connexions */
 .card-2xlCYc,
 /* Cartes cliquables */
+.item-1TA5qI,
+/* Élément d'une liste à sélection unquique (ex: confidentialité et sécurité) */
 .item-2idW98,
 /* Liste radio */
 .option-2eIyOn,
@@ -941,6 +960,19 @@ a[href="/store"],
 /* Revenir aux messages récents */
 .barBase-3xxDXu {
   right: 12px;
+}
+
+/* Colle la pastille non lu d'un channel au bord de la fenêtre */
+.unread-36eUEm {
+  left: 0 !important;
+}
+
+.link-1_kTxV {
+  padding-left: 12px;
+}
+
+.wrapper-NhbLHG {
+  margin-left: 0;
 }
 
 /* Couleur des boutons du menu de serveur lorsque actif */
@@ -1086,6 +1118,11 @@ a[href="/store"],
 
 .result-pzZrwj:hover::after {
   content: none;
+}
+
+/* Statut de salon */
+.textAreaWithoutAttachmentButton-1as0NS {
+  padding: 15px !important;
 }
 
 /* Couleurs dans la sélection d'emoji et GIFs */
@@ -1540,7 +1577,11 @@ header,
 label,
 h2,
 .link-1_kTxV,
-.mainContent-20q_Hp {
+/* Channels */
+.link-39sEB3
+
+/* Liste utilisateurs messages privé */
+  {
   cursor: default !important;
 }
 
@@ -1815,7 +1856,6 @@ span:not([class*=spinner-]):not([class*=spinnerItem]) {
 #app-mount .wrapper-NhbLHG {
   height: auto;
   margin-bottom: 2px;
-  margin-left: 0;
 }
 
 #app-mount .wrapper-NhbLHG.modeMuted-2T4MDZ .name-28HaxV {
