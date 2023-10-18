@@ -5,6 +5,10 @@
 ██      ██   ██ ██    ██ ██      ██ ██
 ██      ██   ██  ██████  ██      ██ ███████
 */
+/* Éviter que le popout de profil en bas à gauche sorte de la fenêtre */
+.accountProfilePopoutWrapper-Ag_Fip {
+  left: 0;
+}
 
 /* Éviter que la largeur des connexions sur un profil soient trop grandes */
 .connectedAccount-2Jb-Z0 {
@@ -537,7 +541,7 @@
    ██    ██    ██    ███████ ███████ ██████  ██   ██ ██   ██
 */
 
-/* Permettre de faire scroller la liste de serveurs */
+/* Masquer la scrollbar de liste de serveurs */
 .scroller-3X7KbA::-webkit-scrollbar {
   display: none;
 }
@@ -594,11 +598,6 @@
   top: calc(20px + var(--HSL-server-icon-size)) !important;
 }
 
-/* Endroit par où il est possible de déplacer la fenêtre */
-.container-1eFtFS {
-  display: block;
-}
-
 #app-mount,
 .guilds-2JjMmN,
 .sidebarRegion-1VBisG,
@@ -628,18 +627,18 @@
 }
 
 /* Boutons Windows */
-.winButton-3UMjdg {
+.winButton-3SigSb {
   height: calc(24px + var(--HSL-server-icon-size));
   width: 40px;
 }
 
 /* Augmente la taille des boutons Windows */
-.winButton-3UMjdg>svg {
+.winButton-3SigSb>svg {
   transform: scale(1.2);
 }
 
 /* Barre de titre */
-.withFrame-2dL45i {
+.withFrame-1sEfxu {
   position: absolute;
   right: 0 !important;
   margin: 0;
@@ -664,7 +663,7 @@
 }
 
 /* Couleur du bouton pour fermer la fenêtre */
-.winButtonClose-3Q8ZH5:hover {
+.winButtonClose-23zAIt:hover {
   background-color: #E81123;
 }
 
@@ -679,6 +678,11 @@
 ██  ██  ██ ██           ██      ██ ██   ██ ██    ██ ██           ██
 ██      ██ ███████ ███████ ███████ ██   ██  ██████  ███████ ███████
 */
+
+/* Liste de messages */
+.messagesWrapper-RpOMA3 {
+  background-color: var(--background);
+}
 
 /* Barre de saisie de messages */
 .textArea-2CLwUE {
@@ -835,7 +839,7 @@
 */
 
 /* Retire des éléments de l'interface */
-.wordmarkWindows-2dq6rw,
+.wordmarkWindows-1rsity,
 /* "Discord" de la barre de titre */
 button[aria-label="Envoyer un cadeau"],
 /* Bouton envoyer un cadeau de la barre de texte */
@@ -1032,7 +1036,7 @@ a[href="/store"],
   padding-left: 10px;
 }
 
-.container-3XgAHv {
+.container-2vWgD2 {
   background-color: var(--background);
 }
 
@@ -1367,7 +1371,8 @@ a[href="/store"],
 }
 
 /* Message input box */
-.form-3gdLxP {
+.form-3qe0Ni {
+  background-color: var(--background);
   margin-top: -7px;
   margin-bottom: -1px;
   padding-left: 2px;
@@ -1406,7 +1411,7 @@ a[href="/store"],
 }
 
 /* Aligne le nom du groupe des utilisateurs dans la barre de droite avec leur photo de profil */
-.membersGroup-2eiWxl {
+.membersGroup-2YoqY- {
   padding-left: 7px;
   padding-top: 15px;
   height: 30px;
@@ -1445,13 +1450,8 @@ a[href="/store"],
   margin-bottom: -1px;
 }
 
-/* Aligne le nom des catégories avec les membres */
-.member-3-YXUe {
-  margin: 3px;
-}
-
-.members-1998pB {
-  width: 225px;
+.content-yjf30S {
+  padding: 0 2px 0 5px;
 }
 
 /* Largeur du texte dans la boîte qui entoure les messages dans main afin qu'il puissent occuper toute la largeur disponible et ajoute du padding à gauche pour l'effet hover */
@@ -1465,11 +1465,6 @@ a[href="/store"],
   background-color: var(--background-light) !important;
   font-size: 12px !important;
   text-align: center !important;
-}
-
-/* Centre verticalement le texte "En direct" */
-.live-vBWnV6 {
-  padding-top: 1px;
 }
 
 /* Rend le nom de l'utilisateur, la date des messages et la pastille "Bot" impossible à sélectionner */
@@ -1849,6 +1844,10 @@ span:not([class*=spinner-]):not([class*=spinnerItem]) {
   background: var(--background);
 }
 
+#app-mount .container-1CH86i {
+  background: transparent;
+}
+
 #app-mount .container-1zzFcN {
   border: none;
 }
@@ -1937,7 +1936,7 @@ span:not([class*=spinner-]):not([class*=spinnerItem]) {
   color: rgb(var(--accent), 1);
 }
 
-#app-mount .form-3gdLxP:before {
+#app-mount .form-3qe0Ni:before {
   content: none;
 }
 
@@ -2306,8 +2305,8 @@ span:not([class*=spinner-]):not([class*=spinnerItem]) {
 }
 
 #app-mount .container-2o3qEW,
-#app-mount .members-3WRCEx,
-#app-mount .members-3WRCEx>div {
+#app-mount .members-2y1nVj,
+#app-mount .members-2y1nVj>div {
   background: transparent;
 }
 
@@ -2496,12 +2495,6 @@ span:not([class*=spinner-]):not([class*=spinnerItem]) {
 #app-mount .messageContainer-3VTXBC {
   border-radius: 0 0 var(--border-radius) var(--border-radius);
   background: var(--background-alt);
-}
-
-#app-mount .contentWrapper-3vHNP2 {
-  background: var(--background-light-alt);
-  box-shadow: var(--box-shadow);
-  border-radius: var(--border-radius);
 }
 
 #app-mount .scroller-2MALzE::-webkit-scrollbar {
